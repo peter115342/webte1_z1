@@ -1,0 +1,79 @@
+@font-face {
+    font-family: "Montserrat";
+    src: url(fonts/Montserrat-Medium.ttf)  format("truetype");
+    font-weight: normal;
+}
+@font-face {
+    font-family: "Montserrat";
+    src: url(fonts/Montserrat-Black.ttf) format("truetype");
+    font-weight: bolder;
+}
+
+@font-face {
+    font-family: "Montserrat";
+    src: url(fonts/Montserrat-SemiBold.ttf) format("truetype");
+    font-weight: bold;
+}
+
+
+:root{
+   --border: 1px solid rgb(10, 85, 85);
+}
+body{
+    font-family: "Montserrat", sans-serif;
+    background-color: rgb(4, 136, 134);
+    color: rgb(42, 42, 42);
+    margin: 0;
+    font-size: 14px;
+}
+h1{
+    color: rgb(42, 42, 42);
+    text-decoration: none;
+    font-family: "Montserrat", sans-serif;
+    font-weight: bolder;
+}
+a{
+    color: rgb(42, 42, 42);
+    text-decoration: none;
+    font-size: 18px;
+    font-family: "Montserrat", sans-serif;
+    font-weight: bolder;
+}
+a:hover{
+    font-weight: 700;
+    text-decoration: none;
+
+}
+
+header{
+    padding: 5px;
+    width: calc(100%-40px);
+    border-bottom:  var(--border);
+    display: grid;
+    grid-template-columns: 20%  80%;
+}
+
+.logo img{
+     height: 65px;
+    
+}
+
+header ul{
+padding: 0px;
+list-style: none;
+display: inline-flex;
+align-items: center;
+justify-content: center;
+}
+
+header ul li{
+    padding: 0px 30px;
+}
+
+footer{
+    padding:  5px;
+    width: calc(100%-40px);
+    justify-content: center;
+    display: grid;
+    border-top:  var(--border);
+}
