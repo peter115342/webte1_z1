@@ -1,9 +1,14 @@
 @font-face {
     font-family: "Montserrat";
     src: url(fonts/Montserrat-Medium.ttf)  format("truetype");
-    font-weight: normal;
 }
+
 @font-face {
+    font-family: "Montserrat";
+    src: url(fonts/Montserrat-Bold.ttf)  format("truetype");
+    font-weight: bold;
+}
+/*@font-face {
     font-family: "Montserrat";
     src: url(fonts/Montserrat-Black.ttf) format("truetype");
     font-weight: bolder;
@@ -13,67 +18,237 @@
     font-family: "Montserrat";
     src: url(fonts/Montserrat-SemiBold.ttf) format("truetype");
     font-weight: bold;
-}
+}  */
 
 
 :root{
-   --border: 1px solid rgb(10, 85, 85);
+   --border: 1px solid rgb(52, 82, 94);
+   --shadow-border : 10px 20px 25px #2a2a2a;
 }
 body{
     font-family: "Montserrat", sans-serif;
-    background-color: rgb(4, 136, 134);
+    background-color:rgb(144, 167, 163) ;
     color: rgb(42, 42, 42);
     margin: 0;
-    font-size: 14px;
 }
 h1{
     color: rgb(42, 42, 42);
     text-decoration: none;
+    font-weight: bold;
     font-family: "Montserrat", sans-serif;
-    font-weight: bolder;
+}
+h2{
+    color: rgb(42, 42, 42);
+    text-decoration: none;
+    font-weight: bold;
+    font-family: "Montserrat", sans-serif;
+}
+h3{
+    color: rgb(42, 42, 42);
+    text-decoration: none;
+    font-weight: bold;
+    font-family: "Montserrat", sans-serif;
+}
+h4{
+    color: rgb(42, 42, 42);
+    text-decoration: none;
+    font-weight: bold;
+    font-family: "Montserrat", sans-serif;
+}
+h5{
+    color: rgb(42, 42, 42);
+    text-decoration: none;
+    font-weight: bold;
+    font-family: "Montserrat", sans-serif;
+}
+
+h6{
+    color: rgb(42, 42, 42);
+    text-decoration: none;
+    font-weight: bold;
+    font-family: "Montserrat", sans-serif;
 }
 a{
     color: rgb(42, 42, 42);
     text-decoration: none;
     font-size: 18px;
     font-family: "Montserrat", sans-serif;
-    font-weight: bolder;
 }
 a:hover{
-    font-weight: 700;
+    font-weight: 1000;
     text-decoration: none;
 
 }
 
 header{
     padding: 5px;
-    width: calc(100%-40px);
     border-bottom:  var(--border);
     display: grid;
     grid-template-columns: 20%  80%;
-}
-
-.logo img{
-     height: 65px;
     
 }
 
-header ul{
-padding: 0px;
-list-style: none;
-display: inline-flex;
-align-items: center;
-justify-content: center;
+.logo img{
+     height: 70px;
 }
 
-header ul li{
+.nav ul{
+padding: 1rem;
+list-style: none;
+display: flex;
+align-items: center;
+justify-content: end;
+margin: 0;
+}
+
+.nav  ul li{
     padding: 0px 30px;
 }
 
-footer{
-    padding:  5px;
-    width: calc(100%-40px);
-    justify-content: center;
-    display: grid;
-    border-top:  var(--border);
+
+.container{
+    width: 95%;
+    max-width: 950px;
+    margin:0 auto;
+    
 }
+
+.portrait img{
+    float: left;
+    height: 25%;
+    width: 25%;
+    max-width: 25%;
+    margin: 15px;
+    box-shadow: var(--shadow-border);
+    border-radius:6% ;
+    -webkit-border-radius:6% ;
+    -moz-border-radius:6% ;
+    -ms-border-radius:6% ;
+    -o-border-radius:6% ;
+    position: relative;
+    display: flex;
+    align-items: end;
+    justify-content: center;
+}
+
+
+.bannerTitle{
+    font-size: 35px;
+}
+
+.gradientText{
+    background: linear-gradient(to right, rgb(78, 5, 161),rgb(196, 82, 16),rgb(241, 4, 4));
+    background-size: 200%   200%;
+    animation: rainbow 2s ease-in-out infinite;
+    background-clip: text;
+    -webkit-background-clip: text;
+    color:#2a2a2a ;
+    font-size: 60px;
+    margin: auto;
+    display: block;
+    transition: color .2s ease-in-out;
+    text-transform: uppercase;
+    
+}
+.gradientText:hover{
+    color:rgba(0,0,0,0) ;
+}
+
+@keyframes rainbow{
+    0%{background-position:left}
+    50%{background-position:right}
+    100%{background-position:left}
+}
+
+.container ul{
+list-style: none ;
+font-size: large;
+margin: 10px;
+}
+
+.container ul li::before{
+content: "\25B6";
+color: #2a2a2a;
+ width: 20px;
+ margin-left: -1em;
+ margin-right: 5px;
+ margin-top: 5px;
+
+}
+.content{
+    text-align: left;
+    position: relative;
+}
+
+
+
+
+
+#responsiveMenuButton{
+background-color: transparent;
+border: 0;
+cursor: pointer;
+position: absolute;
+display: none;
+top: 0;
+right: 0;
+
+}
+
+#responsiveMenuButton img{
+height: 2rem ;
+width: 2rem ;
+top: 2rem;
+right: 1.5rem;
+
+position: absolute;
+}
+.dropdown{ position: absolute;
+    right: 2rem;
+    top: 4.1rem;
+    width: 280px;
+    height: 0px;
+    background-color: black, 0.1;
+    backdrop-filter: blur(15px);
+    overflow: hidden; z-index: 10;
+    box-shadow: var(--shadow-border);
+    display: none;
+    border-radius:8% ;
+    -webkit-border-radius:8% ;
+    -moz-border-radius:8% ;
+    -ms-border-radius:8% ;
+    -o-border-radius:8% ;
+
+
+}
+
+.dropdown ul{
+    list-style: none;
+}
+
+.dropdown li{
+padding: 0.7rem;
+display: flex;
+align-items: center;
+justify-content: left;
+}
+    
+.dropdown.open {
+    height: 250px;
+}
+
+@media screen and (max-width: 850px){
+    #responsiveMenuButton{
+        display: block;
+    }
+    .nav  {
+        display: none;
+    }
+    .dropdown{
+        display: block;
+    }
+    
+   
+    
+}
+

@@ -16,27 +16,67 @@
         </a>
         </div>
 
-            <ul class="nav">
+            <div class="nav">
+                <ul>
                 <li><a href="index.html">O mne</a></li>
                 <li><a href="resume.html">Zivotopis</a></li>
                 <li><a href="schedule.html">Rozvrh</a></li>
                 <li><a href="interactiveImage.html">Interaktivny obrazok</a></li>               
             </ul>
-        
+            </div>
+            <button aria-label="toggle menu" id="responsiveMenuButton">
+                <img src="images/menu.png"  class="openIcon" alt="Hamburger menu">
+
+            </button>
+            <div class="dropdown">
+                <ul>
+                <li><a href="index.html">O mne</a></li>
+                <li><a href="resume.html">Zivotopis</a></li>
+                <li><a href="schedule.html">Rozvrh</a></li>
+                <li><a href="interactiveImage.html">Interaktivny obrazok</a></li>               
+            </ul>
+
     </header>
 
     <main>
         <div class="container">
-            <h1>Vitajte, moje meno je </h1>
-                <h1 class="gradient-text"> Peter</h1>
+            <div class="content">
+                <div class="portrait">
+                    <img src="images/portrait.png" alt = "Fotografia mna z tabla" >
+                </div>
+            <h1 class="bannerTitle">Vitaj, moje meno je </h1>
+                
+                <h1 class="gradientText"> Peter</h1>
+                <p>Lorem  Lorem, ipsum dolor sit amet Lorem ipsum, dolor sit amet consectetur adipisicing elit. Numquam facilis consectetur ipsa iste laboriosam quaerat voluptates possimus saepe atque. Assumenda adipisci sed perspiciatis, iste incidunt rerum. Accusantium maxime possimus delectus. Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam repellendus excepturi dolores asperiores eligendi sit cumque magni ut id rerum vel cum fugiat sed atque maiores, error est. Nam, voluptas? Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet unde sunt quia facere, rem obcaecati alias. Eaque aspernatur at recusandae maxime nihil assumenda vero laborum modi nisi, optio blanditiis iste. consectetur adipisicing elit. Rem deserunt obcaecati quasi perferendis qui assumenda, et molestiae laboriosam eos odit voluptates ducimus ea, sint accusantium nobis eum unde veniam? Molestiae?ipsum dolor sit amet consectetur adipisicing elit. Ducimus, quas perspiciatis numquam assumenda repellat dolore, et nemo pariatur magni veritatis dolorum non quod officiis id quibusdam. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eveniet, animi impedit neque unde corporis recusandae at tempore cum asperiores aperiam magnam voluptatem quae eligendi fugit omnis molestias? Harum, dolore repellendus.</p>
+               <h3> Lorem : </h3>
+                <ul class="subjects">
+                    <li>Lorem</li>
+                    <li>Lorem</li>                    
+                    <li>Lorem</li>
+                    <li>Lorem</li>
+                    <li>Lorem</li>   
+                    </ul>        
 
             
         </div>
+        </div>
     </main>
-
+    <!--
     <footer>
         <p>&copy; 2023 Peter Muzslay</p>
     </footer>
+        -->
+        <script>
+           const menuToggle = document.getElementById("responsiveMenuButton");
+           const toggleDropdown = document.getElementById("responsiveMenuButton");
+           const dropMenu = document.querySelector(".dropdown");
 
+            menuToggle.onclick = function() {
+                dropMenu.classList.toggle("open");
+            }
+
+
+        </script>
+        
 </body>
 </html>
