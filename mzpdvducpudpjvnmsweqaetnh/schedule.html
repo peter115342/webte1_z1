@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>O mne</title>
+    <title>Rozvrh</title>
     <link rel="stylesheet" href="styles.css"> <!-- Link to your external CSS file (if any) -->
 </head>
 <body>
@@ -15,13 +15,26 @@
        </a>
        </div>
 
-           <ul class="nav">
+           <div class="nav">
+               <ul>
                <li><a href="index.html">O mne</a></li>
                <li><a href="resume.html">Zivotopis</a></li>
                <li><a href="schedule.html">Rozvrh</a></li>
                <li><a href="interactiveImage.html">Interaktivny obrazok</a></li>               
            </ul>
-       
+           </div>
+           <button aria-label="toggle menu" id="responsiveMenuButton">
+               <img src="images/menu.png"  class="openIcon" alt="Hamburger menu">
+
+           </button>
+           <div class="dropdown">
+               <ul>
+               <li><a href="index.html">O mne</a></li>
+               <li><a href="resume.html">Zivotopis</a></li>
+               <li><a href="schedule.html">Rozvrh</a></li>
+               <li><a href="interactiveImage.html">Interaktivny obrazok</a></li>               
+           </ul>
+
    </header>
 
     <main>
@@ -37,6 +50,6 @@
     </footer>
 
 
-
+    <script src ="app.js"></script>
 </body>
 </html>
