@@ -52,9 +52,9 @@ h3{
     font-family: "Montserrat", sans-serif;
 }
 h4{
-    color: rgb(42, 42, 42);
+    color: rgb(200, 205, 204);
     text-decoration: none;
-    font-weight: bold;
+    font-weight: normal;
     font-family: "Montserrat", sans-serif;
 }
 h5{
@@ -196,7 +196,7 @@ color: #2a2a2a;
     position: relative;
     width: 95%;
     max-width: 1000px;
-    min-height: 1400px;
+    min-height: 1200px;
     margin: 0 auto;
     margin-top: 25px;
     display: grid;
@@ -216,13 +216,11 @@ color: #2a2a2a;
 position: relative;
 background-color:rgb(139, 17, 4);
 padding: 20px;
-justify-content: end;
-
 }
 .right_resume{
     position: relative;
     padding: 20px;
-    background-color:rgb(42, 42, 42) ;
+    background-color:rgb(113, 114, 114) ;
     }
 
 .resume_portrait{
@@ -259,6 +257,84 @@ justify-content: end;
     border-bottom: var(--border);
 
 }
+.resume_contact{
+    margin-top: 10px;
+    padding-bottom: 10px;
+    border-bottom: var(--border);
+}
+.resume_contact ul{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    
+}
+.phone_icon img{
+    height: 1rem;
+    position: relative;
+    margin-right: 2px;
+}
+.resume_text{
+    display: inline-flex;
+    margin: 0;
+    padding: 0;
+    font-size: larger;
+    font-weight:500;
+}
+.resume_title{
+    margin: 0px;
+    padding: 0;
+    font-size: 25px;
+}
+
+.resume_education ul{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+.resume_education{
+    margin-top: 10px;
+    padding-bottom: 10px;
+    border-bottom: var(--border);
+}
+
+.resume_languages ul{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+.resume_languages{
+    margin-top: 10px;
+    
+}
+
+.right_resume_title{
+    margin: 0px;
+    padding: 0;
+    font-size: 35px;
+    color:rgb(139, 17, 4);
+   
+}
+.resume_jobs ul{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    
+}
+.resume_jobs{
+    border-bottom: var(--border);
+    margin-top: 10px;
+    padding-bottom: 10px;
+}
+
+.resume_skills ul{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+.resume_skills{
+    margin-top: 10px;
+}
+
 
 
 @media screen and (max-width: 850px) {
