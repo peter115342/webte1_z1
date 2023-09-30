@@ -93,6 +93,7 @@ table{
     min-height: 900px;
     color: #2a2a2a;
    /* box-shadow: var(--shadow-border); */
+   empty-cells: hide;
 }
 
 table tr{
