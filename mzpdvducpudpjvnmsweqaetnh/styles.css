@@ -54,7 +54,7 @@ h3{
 h4{
     color: rgb(200, 205, 204);
     text-decoration: none;
-    font-weight: normal;
+    font-weight: bold;
     font-family: "Montserrat", sans-serif;
 }
 h5{
@@ -172,13 +172,17 @@ margin: 0;
     100%{background-position:left}
 }
 
-.container ul{
+.content ul{
+position: relative;
 list-style: none ;
 font-size: large;
-margin: 10px;
+margin: auto;
+padding: 15px;
+margin-top: 0px;
+padding-top: 0px;
 }
 
-.container ul li::before{
+.content ul li::before{
 content: "\25B6";
 color: #2a2a2a;
  width: 20px;
@@ -190,6 +194,45 @@ color: #2a2a2a;
 .content{
     text-align: left;
     position: relative;
+}
+
+.contact ul{
+    list-style: none;
+    padding: 0px;
+    margin: 0px;
+}
+
+.contact_banner{
+margin: 0px;
+padding: 0px;
+}
+
+.content_end{
+    position: relative;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    border-bottom: var(--border);
+    margin-bottom: 10px;
+}
+
+.citation_box{
+    float: right;
+    align-self: baseline;
+    justify-self: right;
+    display: inline-flex;
+    border: var(--border);
+    padding: 5px;
+}
+
+.quotes_icon img{
+    height: 2rem;
+    position: relative;
+    margin-right: 5px;
+}
+
+.citation{
+    font-weight: 550;
+    font-size: larger;
 }
 
 .resume_container{
@@ -218,9 +261,9 @@ background-color:rgb(139, 17, 4);
 padding: 20px;
 }
 .right_resume{
-    position: relative;
-    padding: 20px;
-    background-color:rgb(113, 114, 114) ;
+position: relative;
+padding: 20px;
+background-color:rgb(114, 157, 157) ;
     }
 
 .resume_portrait{
@@ -266,13 +309,13 @@ padding: 20px;
     list-style: none;
     margin: 0;
     padding: 0;
-    
 }
-.phone_icon img{
+.contact_icon img{
     height: 1rem;
     position: relative;
     margin-right: 2px;
 }
+
 .resume_text{
     display: inline-flex;
     margin: 0;
@@ -282,7 +325,7 @@ padding: 20px;
 }
 .resume_title{
     margin: 0px;
-    padding: 0;
+    padding: 0px;
     font-size: 25px;
 }
 
@@ -304,7 +347,6 @@ padding: 20px;
 }
 .resume_languages{
     margin-top: 10px;
-    
 }
 
 .right_resume_title{
@@ -312,7 +354,6 @@ padding: 20px;
     padding: 0;
     font-size: 35px;
     color:rgb(139, 17, 4);
-   
 }
 .resume_jobs ul{
     list-style: none;
