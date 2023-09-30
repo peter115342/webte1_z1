@@ -24,6 +24,7 @@
 :root{
    --border: 1px solid rgb(42, 42, 42);
    --shadow-border : 10px 20px 25px #2a2a2a;
+   --table-border:  3px  solid rgb(102, 102, 102);
 }
 
 body{
@@ -80,6 +81,40 @@ a:hover{
     font-weight: 1000;
     text-decoration: none;
 
+}
+
+table{
+    border-collapse: collapse;
+    position: relative;
+    margin: 0 auto;
+    margin-top: 50px;
+    width: 95%;
+    max-width: 1250px;
+    min-height: 900px;
+    color: #2a2a2a;
+   /* box-shadow: var(--shadow-border); */
+}
+
+table tr{
+    padding: 0.5rem;
+    border: var(--table-border);
+}
+
+thead tr{
+    background-color:rgb(139, 17, 4);
+}
+thead th{
+    font-size: 25px;
+    padding: 5px;
+}
+table  td{
+    border: var(--table-border);
+    padding: 0.5rem;
+    text-align: center;
+}
+
+tbody tr:nth-child(even){
+    background-color:rgb(114, 157, 157) ;
 }
 
 header{
