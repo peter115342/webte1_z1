@@ -25,6 +25,7 @@
    --border: 1px solid rgb(42, 42, 42);
    --shadow-border : 10px 20px 25px #2a2a2a;
    --table-border:  3px  solid rgb(102, 102, 102);
+   --thead-border : 3px  solid rgb(80, 11, 11);
 }
 
 body{
@@ -56,6 +57,7 @@ h4{
     color: rgb(200, 205, 204);
     text-decoration: none;
     font-weight: bold;
+    font-size: large;
     font-family: "Montserrat", sans-serif;
 }
 h5{
@@ -70,53 +72,99 @@ h6{
     text-decoration: none;
     font-weight: bold;
     font-family: "Montserrat", sans-serif;
+    
 }
 a{
     color: rgb(42, 42, 42);
     text-decoration: none;
-    font-size: 18px;
     font-family: "Montserrat", sans-serif;
+    font-size: large;
 }
 a:hover{
     font-weight: 1000;
     text-decoration: none;
-
 }
 
 table{
-    border-collapse: collapse;
-    position: relative;
-    margin: 0 auto;
-    margin-top: 50px;
-    width: 95%;
-    max-width: 1250px;
-    min-height: 900px;
-    color: #2a2a2a;
-   /* box-shadow: var(--shadow-border); */
-   empty-cells: hide;
+   border-collapse: collapse;
+   position: relative;
+   margin: 0 auto;
+   margin-top: 50px;
+   padding: 5px;
+   width: 90%;
+   max-width: 1250px;
+   min-height: 900px;
+   color: #2a2a2a;
+   box-shadow: var(--shadow-border);
+   border-radius:25px ;
+   -webkit-border-radius:25px ;
+   -moz-border-radius:25px ;
+   -ms-border-radius:25px ;
+   -o-border-radius:25px ;
 }
 
-table tr{
-    padding: 0.5rem;
-    border: var(--table-border);
-}
+
 
 thead tr{
-    background-color:rgb(139, 17, 4);
+    padding: 5px;
+    height: 75px;
+    margin: 5px;
+    color:rgb(80, 11, 11) ;
+    font-weight: 700;
+    font-size: larger;
+    
 }
 thead th{
     font-size: 25px;
-    padding: 5px;
+    padding: 10px;
 }
 table  td{
-    border: var(--table-border);
-    padding: 0.5rem;
+    padding: 0px;
+    font-size: 17px;
+    font-weight: 550;
     text-align: center;
+    max-height: 250px;
+    height: 75px;
+    overflow: hidden;
 }
 
 tbody tr:nth-child(even){
-    background-color:rgb(114, 157, 157) ;
+    background-color:rgb(161, 161, 161); ;
 }
+.PE_class{
+    background-color: rgb(210, 171, 99);
+}
+.practice{
+background-color: rgb(53, 128, 82);
+
+
+}
+.lecture{
+    background-color: rgb(60, 133, 197);
+}
+.day{
+    padding: 5px;
+    height: 75px;
+    margin: 5px;
+    border-right: var(--thead-border);
+    color:rgb(80, 11, 11) ;
+    font-weight: 700;
+    font-size: larger;
+    border-top: var(--thead-border);
+}
+
+
+.time{
+    border-bottom: var(--thead-border);
+    border-right: var(--thead-border);
+}
+.top_left{
+    border-right: var(--thead-border);
+}
+.top_right{
+border-bottom: var(--thead-border);
+}
+
 
 header{
     padding: 5px;
@@ -125,6 +173,11 @@ header{
     grid-template-columns: 1fr 4fr;
     background-color: rgb(42, 42, 42);
     box-shadow: var(--shadow-border);
+    border-radius:20px ;
+    -webkit-border-radius:20px ;
+    -moz-border-radius:20px ;
+    -ms-border-radius:20px ;
+    -o-border-radius:20px ;
 }
 
 .logo img{
@@ -282,11 +335,11 @@ padding: 0px;
     grid-template-columns: 1fr 2fr;
     justify-self: center;
     box-shadow: var(--shadow-border);
-    border-radius: 2.5%;
-    -webkit-border-radius: 2.5%;
-    -moz-border-radius: 2.5%;
-    -ms-border-radius: 2.5%;
-    -o-border-radius: 2.5%;
+    border-radius:25px ;
+   -webkit-border-radius:25px ;
+   -moz-border-radius:25px ;
+   -ms-border-radius:25px ;
+   -o-border-radius:25px ;
     overflow: hidden;
 }
 
@@ -351,7 +404,12 @@ background-color:rgb(114, 157, 157) ;
     position: relative;
     margin-right: 2px;
 }
-
+.left_resume a{
+    font-weight: bold;
+}
+.left_resume p{
+    font-weight: bold;
+}
 .resume_text{
     display: inline-flex;
     margin: 0;
@@ -417,7 +475,9 @@ background-color:rgb(114, 157, 157) ;
 @media screen and (max-width: 850px) {
     header {
       grid-template-columns: repeat(1, 1fr);
-
+    }
+    header a{
+        font-size: 25px;
     }
 
     .nav ul {
@@ -435,6 +495,7 @@ background-color:rgb(114, 157, 157) ;
     }
     .logo img{
         height: 70px;
+        width: 225px;
    }
 
    .resume_container{
@@ -447,7 +508,31 @@ background-color:rgb(114, 157, 157) ;
    }
 
    .gradient_text{
-    font-size: 45px;
-    margin: au;
+    font-size: 40px;
+    margin: auto;
    }
+    table thead tr{
+        display: none;
+    }
+    table tr{
+        display: block;
+    }
+    table td{
+        padding: 5px;
+        text-align: right;
+        display: block;
+        font-size: 30px;
+    }
+    table th{
+        padding: 15px;
+    }
+    table td::before{
+        content: attr(data-title) ;
+        float: left;
+    }
+    .day{
+        border-right: none;
+        border-top: none;
+        font-size: 30px;
+    }
   }
