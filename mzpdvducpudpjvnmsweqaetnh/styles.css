@@ -222,7 +222,7 @@ margin: 0;
 
 
 .mobo_image img{
-    height: auto;
+    position: relative;
     width: 75%;
     transform: translateX(15%) ;
     -webkit-transform: translateX(15%) ;
@@ -232,15 +232,129 @@ margin: 0;
 }
 
 .cpu_dot img {
-   z-index: 10;
-   height: 40px;
-   transform: translate(-100%, -100%);
-   position: absolute;
-   -webkit-transform: translate(-100%, -100%);
-   -moz-transform: translate(-100%, -100%);
-   -ms-transform: translate(-100%, -100%);
-   -o-transform: translate(-100%, -100%);
+    z-index: 10;
+    height: 30px;
+    position: absolute  ;
+    top:45.7%;
+    right: 47%;
+    transform: translate(-5%, -5%);
+    -webkit-transform: translate(-5%, -5%);
+    -moz-transform: translate(-5%, -5%);
+    -ms-transform: translate(-5%, -5%);
+    -o-transform: translate(-5%, -5%);
 }
+.ram_dot img {
+    z-index: 10;
+    height: 30px;
+    position: absolute  ;
+    top:49.3%;
+    right:22%;
+    transform: translate(-5%, -5%);
+    -webkit-transform: translate(-5%, -5%);
+    -moz-transform: translate(-5%, -5%);
+    -ms-transform: translate(-5%, -5%);
+    -o-transform: translate(-5%, -5%);
+}
+
+.ssd_dot img {
+    z-index: 10;
+    height: 30px;
+    position: absolute  ;
+    top:84%;
+    right: 45%;
+    transform: translate(-5%, -5%);
+    -webkit-transform: translate(-5%, -5%);
+    -moz-transform: translate(-5%, -5%);
+    -ms-transform: translate(-5%, -5%);
+    -o-transform: translate(-5%, -5%);
+}
+
+.pcie_dot img {
+    z-index: 10;
+    height: 30px;
+    position: absolute  ;
+    top:93.5%;
+    right:47%;
+    transform: translate(-5%, -5%);
+    -webkit-transform: translate(-5%, -5%);
+    -moz-transform: translate(-5%, -5%);
+    -ms-transform: translate(-5%, -5%);
+    -o-transform: translate(-5%, -5%);
+}
+
+.VRM_dot img {
+    z-index: 10;
+    height: 30px;
+    position: absolute  ;
+    top:14.3%;
+    right:53%;
+    transform: translate(-5%, -5%);
+    -webkit-transform: translate(-5%, -5%);
+    -moz-transform: translate(-5%, -5%);
+    -ms-transform: translate(-5%, -5%);
+    -o-transform: translate(-5%, -5%);
+}
+.cpu_dot :hover + .pop-up{
+    display: block;
+    position: absolute;
+    top:50%;
+    right: 35%;
+}
+
+.ram_dot :hover  + .pop-up{
+    display: block;
+    position: absolute;
+    top:53.5%;
+    right:15.3%;
+
+}
+.ssd_dot :hover  + .pop-up{
+    display: block;
+    position: absolute;
+    top:60.7%;
+    right: 33.5%;
+}
+
+.pcie_dot :hover  + .pop-up{
+    display: block;
+    position: absolute;
+    top:76.5%;
+    right:50.4%;
+
+}
+.VRM_dot :hover  + .pop-up{
+    display: block;
+    position: absolute;
+    top:11.3%;
+    right:26%;
+}
+
+.pop-up{
+          display: none;
+          font-weight: 700;
+          height: fit-content;
+          width: 250px;
+          backdrop-filter: blur(9px);
+          background-color: rgba(42,42,42, 0.7);
+          padding: 7px;
+          padding-top: 0px;
+          border-radius:30px;
+          -webkit-border-radius:30px;
+          -moz-border-radius:30px;
+          -ms-border-radius:30px;
+          -o-border-radius:30px;
+}
+
+.pop-up p{
+    font-size: large;
+    color: rgb(25, 224, 10);
+}
+
+.pop-up h3{
+    font-size: larger;
+    color: rgb(200, 205, 204);
+}
+
 .container{
     width: 95%;
     max-width: 1000px;
@@ -380,8 +494,6 @@ padding: 0px;
    -o-border-radius:25px ;
     overflow: hidden;
 }
-
-
 .left_resume{
 position: relative;
 background-color:rgb(139, 17, 4);
@@ -597,5 +709,87 @@ background-color:rgb(114, 157, 157) ;
     }
     .PE_class{
         border: none;
+    }
+    .image_box{
+ width: 130%;
+ max-width: none;
+ transform: translate(-12%,0%);
+ -webkit-transform: translate(-12%,0%);
+ -moz-transform: translate(-12%,0%);
+ -ms-transform: translate(-12%,0%);
+ -o-transform: translate(-12%,0%);
+}
+    .cpu_dot img {
+        height: 17px;
+        transform: translate(0%,60%);
+        -webkit-transform: translate(0%,60%);
+        -moz-transform: translate(0%,60%);
+        -ms-transform: translate(0%,60%);
+        -o-transform: translate(0%,60%);
+}
+    .ssd_dot img {
+        height: 17px;
+        transform: translate(5%,-25%);
+        -webkit-transform: translate(5%,-25%);
+        -moz-transform: translate(5%,-25%);
+        -ms-transform: translate(5%,-25%);
+        -o-transform: translate(5%,-25%);
+    }
+    .ram_dot img {
+        height: 17px;
+        transform: translate(0%,60%);
+        -webkit-transform: translate(0%,60%);
+        -moz-transform: translate(0%,60%);
+        -ms-transform: translate(0%,60%);
+        -o-transform: translate(0%,60%);
+}
+    .pcie_dot img {
+        height: 17px;
+        transform: translate(5%,-25%);
+        -webkit-transform: translate(5%,-25%);
+        -moz-transform: translate(5%,-25%);
+        -ms-transform: translate(5%,-25%);
+        -o-transform: translate(5%,-25%);
+}
+    .VRM_dot img {
+        height: 17px;
+        transform: translate(-15%,125%);
+        -webkit-transform: translate(-15%,125%);
+        -moz-transform: translate(-15%,125%);
+        -ms-transform: translate(-15%,125%);
+        -o-transform: translate(-15%,125%);
+}
+
+    .cpu_dot :hover + .pop-up{
+        width: 80%;
+        position: absolute;
+        top: 102%;
+        right:  8%;
+    }
+    
+    .ram_dot :hover + .pop-up {
+        width: 80%;
+        position: absolute;
+        top: 102%;
+        right:  8%;
+    }
+    .ssd_dot :hover + .pop-up{
+        width: 80%;
+        position: absolute;
+        top: 102%;        
+        right:  8%;
+    }
+    
+    .pcie_dot :hover + .pop-up{
+        width: 80%;
+        position: absolute;
+        top: 102%;
+        right:  8%;
+    }
+    .VRM_dot :hover + .pop-up{
+        width: 80%;
+        position: absolute;
+        top: 102%;
+        right:  8%;
     }
   }
