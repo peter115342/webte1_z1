@@ -93,7 +93,7 @@ table{
    padding: 5px;
    width: 90%;
    max-width: 1250px;
-   min-height: 900px;
+   min-height: 750px;
    color: #2a2a2a;
    box-shadow: var(--shadow-border);
    border-radius:25px ;
@@ -133,14 +133,17 @@ tbody tr:nth-child(even){
 }
 .PE_class{
     background-color: rgb(210, 171, 99);
+    border: var(--table-border);
 }
 .practice{
 background-color: rgb(53, 128, 82);
+border: var(--table-border);
 
 
 }
 .lecture{
     background-color: rgb(60, 133, 197);
+    border: var(--table-border);
 }
 .day{
     padding: 5px;
@@ -200,9 +203,44 @@ margin: 0;
 
 .nav-text{
     color: rgb(200, 205, 204);
-
 }
 
+.active{
+    text-decoration: underline;
+    text-underline-offset: 5px;
+    text-decoration-color: rgb(139, 17, 4);
+    -moz-text-decoration-color: rgb(139, 17, 4);
+}
+
+.image_box{
+    width: 95%;
+    max-width: 1000px;
+    margin:0 auto;
+    padding-top: 50px;
+    position: relative;
+}
+
+
+.mobo_image img{
+    height: auto;
+    width: 75%;
+    transform: translateX(15%) ;
+    -webkit-transform: translateX(15%) ;
+    -moz-transform: translateX(15%) ;
+    -ms-transform: translateX(15%) ;
+    -o-transform: translateX(15%) ;
+}
+
+.cpu_dot img {
+   z-index: 10;
+   height: 40px;
+   transform: translate(-100%, -100%);
+   position: absolute;
+   -webkit-transform: translate(-100%, -100%);
+   -moz-transform: translate(-100%, -100%);
+   -ms-transform: translate(-100%, -100%);
+   -o-transform: translate(-100%, -100%);
+}
 .container{
     width: 95%;
     max-width: 1000px;
@@ -514,6 +552,10 @@ background-color:rgb(114, 157, 157) ;
     table thead tr{
         display: none;
     }
+
+    tbody tr:nth-child(even){
+        background-color:rgb(200, 205, 204); 
+    }
     table tr{
         display: block;
     }
@@ -524,7 +566,7 @@ background-color:rgb(114, 157, 157) ;
         font-size: 30px;
     }
     table th{
-        padding: 15px;
+        padding: 5px;
     }
     table td::before{
         content: attr(data-title) ;
@@ -534,5 +576,26 @@ background-color:rgb(114, 157, 157) ;
         border-right: none;
         border-top: none;
         font-size: 30px;
+    }
+    .ending{
+        height: 15px;
+        padding: 0px;
+        margin: 0px;
+        background-color:rgb(139, 17, 4);
+    }
+    .empty{
+        background-color:rgb(114, 157, 157);
+    }
+    .ending_week{
+        display: none;
+    }
+    .lecture{
+        border: none;
+    }
+    .practice{
+        border: none;
+    }
+    .PE_class{
+        border: none;
     }
   }
