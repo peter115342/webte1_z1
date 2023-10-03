@@ -34,6 +34,7 @@ body{
     color: rgb(42, 42, 42);
     margin: 10px;
     padding: 10px;
+    min-height: 1000px;
 }
 h1{
     color: rgb(42, 42, 42);
@@ -172,7 +173,7 @@ border-bottom: var(--thead-border);
 header{
     padding: 5px;
     display: grid;
-    width: 100;
+    width: 100%;
     grid-template-columns: 1fr 4fr;
     background-color: rgb(42, 42, 42);
     box-shadow: var(--shadow-border);
@@ -181,6 +182,30 @@ header{
     -moz-border-radius:20px ;
     -ms-border-radius:20px ;
     -o-border-radius:20px ;
+}
+
+footer{
+    padding: 5px;
+    width: 100%;
+    grid-template-columns: 1fr 4fr;
+    background-color: rgb(42, 42, 42);
+    box-shadow: var(--shadow-border);
+    border-radius:20px ;
+    -webkit-border-radius:20px ;
+    -moz-border-radius:20px ;
+    -ms-border-radius:20px ;
+    -o-border-radius:20px ;
+    margin-top: 200px;
+}
+footer p{
+    color: rgb(200, 205, 204);
+    font-weight: bold;
+    font-size: larger;
+}
+.foot_copy{
+    position: relative;
+    margin: 0 auto;
+    width: fit-content;
 }
 
 .logo img{
@@ -216,8 +241,14 @@ margin: 0;
     width: 95%;
     max-width: 1000px;
     margin:0 auto;
-    padding-top: 50px;
+    padding-top:75px;
     position: relative;
+}
+
+.image_container{
+min-height: 850px;
+margin: 0 auto;
+position: relative;
 }
 
 
@@ -286,7 +317,7 @@ margin: 0;
     z-index: 10;
     height: 30px;
     position: absolute  ;
-    top:14.3%;
+    top:17.3%;
     right:53%;
     transform: translate(-5%, -5%);
     -webkit-transform: translate(-5%, -5%);
@@ -299,6 +330,7 @@ margin: 0;
     position: absolute;
     top:50%;
     right: 35%;
+   
 }
 
 .ram_dot :hover  + .pop-up{
@@ -306,6 +338,7 @@ margin: 0;
     position: absolute;
     top:53.5%;
     right:15.3%;
+
 
 }
 .ssd_dot :hover  + .pop-up{
@@ -326,7 +359,8 @@ margin: 0;
     display: block;
     position: absolute;
     top:11.3%;
-    right:26%;
+    right:24.5%;
+
 }
 
 .pop-up{
@@ -360,6 +394,7 @@ margin: 0;
     max-width: 1000px;
     min-height: 1000px;
     margin:0 auto;
+    margin-top: 50px;
 }
 
 .portrait img{
@@ -371,6 +406,7 @@ margin: 0;
     min-width: 26%;
     min-height: 26%;
     margin: 15px;
+    margin-left: 0px;
     box-shadow: var(--shadow-border);
     border-radius:6% ;
     -webkit-border-radius:6% ;
@@ -439,9 +475,18 @@ color: #2a2a2a;
 
 .contact ul{
     list-style: none;
-    padding: 0px;
-    margin: 0px;
+    padding:0px;
+    padding-top: 5px;
+    margin: 0 auto;
+    position: relative;
 }
+.contact ul li {
+    padding-bottom: 5px;
+    font-weight: bolder;
+}
+
+
+
 
 .contact_banner{
 margin: 0px;
@@ -449,9 +494,6 @@ padding: 0px;
 }
 
 .content_end{
-    position: relative;
-    display: grid;
-    grid-template-columns: 1fr 2fr;
     border-bottom: var(--border);
     margin-bottom: 10px;
 }
@@ -620,47 +662,12 @@ background-color:rgb(114, 157, 157) ;
     margin-top: 10px;
 }
 
-
-
-@media screen and (max-width: 850px) {
-    header {
-      grid-template-columns: repeat(1, 1fr);
-    }
-    header a{
-        font-size: 25px;
-    }
-
-    .nav ul {
-      flex-direction: column;
-      height: auto;
-      padding: 0px;
-    }
-
-    .nav ul li {
-      padding: 7px 0;
-    }
-
-    .logo {
-      text-align: center;
-    }
-    .logo img{
-        height: 70px;
-        width: 225px;
-   }
-
-   .resume_container{
-    grid-template-columns: repeat(1, 1fr);
-    min-height: 2000px;
-   }
-   .portrait img{
-    min-width: 45%;
-    min-height: 45%;
-   }
-
-   .gradient_text{
-    font-size: 40px;
-    margin: auto;
-   }
+.schedule_container{
+    min-height: 1000px;
+    position: relative;
+    margin: 0 auto;
+}
+@media screen and (max-width: 1420px) {
     table thead tr{
         display: none;
     }
@@ -710,6 +717,88 @@ background-color:rgb(114, 157, 157) ;
     .PE_class{
         border: none;
     }
+    }
+
+@media screen and (max-width: 1055px) {
+    .cpu_dot :hover + .pop-up{
+        width: 80%;
+        position: absolute;
+        top: 102%;
+        right:  8%;
+    }
+
+    .ram_dot :hover + .pop-up {
+        width: 80%;
+        position: absolute;
+        top: 102%;
+        right:  8%;
+    }
+    .ssd_dot :hover + .pop-up{
+        width: 80%;
+        position: absolute;
+        top: 102%;
+        right:  8%;
+    }
+
+    .pcie_dot :hover + .pop-up{
+        width: 80%;
+        position: absolute;
+        top: 102%;
+        right:  8%;
+    }
+    .VRM_dot :hover + .pop-up{
+        width: 80%;
+        position: absolute;
+        top: 102%;
+        right:  8%;
+    }
+}
+
+
+@media screen and (max-width: 1050px) {
+    body{
+        min-height: 1250px;
+    }
+    header {
+      grid-template-columns: repeat(1, 1fr);
+    }
+    header a{
+        font-size: 25px;
+    }
+
+    .nav ul {
+      flex-direction: column;
+      height: auto;
+      padding: 0px;
+    }
+
+    .nav ul li {
+      padding: 7px 0;
+    }
+    .logo{
+        text-align: center;
+    }
+    
+    .logo img{
+        height: 70px;
+        width: 225px;
+   }
+
+   .resume_container{
+    grid-template-columns: repeat(1, 1fr);
+    min-height: 2000px;
+
+   }
+   .portrait img{
+    min-width: 45%;
+    min-height: 45%;
+   }
+
+   .gradient_text{
+    font-size: 40px;
+    margin: auto;
+   }
+    
     .image_box{
  width: 130%;
  max-width: none;
@@ -721,11 +810,11 @@ background-color:rgb(114, 157, 157) ;
 }
     .cpu_dot img {
         height: 17px;
-        transform: translate(0%,60%);
-        -webkit-transform: translate(0%,60%);
-        -moz-transform: translate(0%,60%);
-        -ms-transform: translate(0%,60%);
-        -o-transform: translate(0%,60%);
+        transform: translate(0%,80%);
+        -webkit-transform: translate(0%,80%);
+        -moz-transform: translate(0%,80%);
+        -ms-transform: translate(0%,80%);
+        -o-transform: translate(0%,80%);
 }
     .ssd_dot img {
         height: 17px;
@@ -737,24 +826,24 @@ background-color:rgb(114, 157, 157) ;
     }
     .ram_dot img {
         height: 17px;
-        transform: translate(0%,60%);
-        -webkit-transform: translate(0%,60%);
-        -moz-transform: translate(0%,60%);
-        -ms-transform: translate(0%,60%);
-        -o-transform: translate(0%,60%);
+        transform: translate(-25%,90%);
+        -webkit-transform: translate(-25%,90%);
+        -moz-transform: translate(-25%,90%);
+        -ms-transform: translate(-25%,90%);
+        -o-transform: translate(-25%,90%);
 }
     .pcie_dot img {
         height: 17px;
-        transform: translate(5%,-25%);
-        -webkit-transform: translate(5%,-25%);
-        -moz-transform: translate(5%,-25%);
-        -ms-transform: translate(5%,-25%);
-        -o-transform: translate(5%,-25%);
+        transform: translate(5%,25%);
+        -webkit-transform: translate(5%,25%);
+        -moz-transform: translate(5%,25%);
+        -ms-transform: translate(5%,25%);
+        -o-transform: translate(5%,25%);
 }
     .VRM_dot img {
         height: 17px;
         transform: translate(-15%,125%);
-        -webkit-transform: translate(-15%,125%);
+        -webkit-transform: translate(-15%,135%);
         -moz-transform: translate(-15%,125%);
         -ms-transform: translate(-15%,125%);
         -o-transform: translate(-15%,125%);
@@ -791,5 +880,9 @@ background-color:rgb(114, 157, 157) ;
         position: absolute;
         top: 102%;
         right:  8%;
+    }
+
+    footer{
+        margin-top: 70px;
     }
   }
